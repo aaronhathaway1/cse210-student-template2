@@ -5,13 +5,13 @@ namespace YouTube
 {
   class Video
   {
-    public string Title { get; set; }
+    public string Title { get; private set; }
 
-    public string Author { get; set; }
+    public string Author { get; private set; }
 
-    public int Length { get; set; }
+    public int Length { get; private set; }
 
-    public List<Comment> Comments { get; set; }
+    public List<Comment> Comments { get; private set; }
 
     public Video(string title, string author, int length)
     {
