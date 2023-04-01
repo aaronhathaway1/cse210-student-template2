@@ -6,17 +6,23 @@ namespace Products
   {
     public string Name { get; private set; }
     public string ProductId { get; private set; }
-    public double IndividualPrice { get; private set; }
     public double Price { get; private set; }
+    public double UnitPrice { get; private set; }
+    public int Quantity { get; private set; }
 
-    public Product()
+    public Product(string name, string productId, double unitPrice, int quantity)
     {
+      Name = name;
+      ProductId = productId;
+      UnitPrice = unitPrice;
+      Quantity = quantity;
 
+      setPrice();
     }
 
-    private double setPrice()
+    private void setPrice()
     {
-      return -1;
+      Price = UnitPrice * Quantity;
     }
 
   }

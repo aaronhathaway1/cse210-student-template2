@@ -6,13 +6,23 @@ namespace Products
   {
     public string Name { get; private set; }
     public Address Address { get; private set; }
-    public bool IsInUSA => (Address.Country == "USA") ? true : false;
-
 
     public Customer(string name, Address address)
     {
       Name = name;
       Address = address;
+    }
+
+    public Boolean IsInUSA()
+    {
+      if (Address.Country == "USA")
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
 
 

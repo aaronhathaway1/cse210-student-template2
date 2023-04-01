@@ -4,20 +4,36 @@ namespace Products
 {
   class Address
   {
-    public string Street { get; private set; }
-    public string City { get; private set; }
-    public string State { get; private set; }
+    private string Street { get; set; }
+    private string City { get; set; }
+    private string State { get; set; }
     public string Country { get; private set; }
 
-    public bool IsInUSA => (Country == "USA") ? true : false;
-    public Address()
+    public Address(string street, string city, string state, string country)
     {
+      Street = street;
+      City = city;
+      State = state;
+      Country = country;
+    }
 
+    public Boolean IsInUSA()
+    {
+      if (Country == "USA")
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
 
     public void printAddress()
     {
-      Console.WriteLine();
+      Console.WriteLine(Street);
+      Console.WriteLine($"{City}, {State}");
+      Console.WriteLine(Country);
     }
 
 
