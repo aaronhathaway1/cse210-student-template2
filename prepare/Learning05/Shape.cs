@@ -9,16 +9,17 @@ namespace Shapes
   {
     protected string _color;
 
+    public Shape(string color)
+    {
+      setColor(color);
+    }
+
 
     protected void setColor(string color)
     {
       _color = color;
     }
 
-    public Shape(string color)
-    {
-      setColor(color);
-    }
 
     public string getColor()
     {
@@ -26,8 +27,6 @@ namespace Shapes
     }
 
     public abstract double getArea();
-
-
 
 
   }
